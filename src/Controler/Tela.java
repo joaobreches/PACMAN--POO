@@ -52,23 +52,23 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
         faseAtual = new ArrayList<Personagem>();
 
         /*Cria faseAtual adiciona personagens*/
-        hero = new Hero("skoot.png");
+        hero = new Hero("pacman.png");
         hero.setPosicao(0, 7);
         this.addPersonagem(hero);
         
-        ZigueZague zz = new ZigueZague("robo.png");
+        ZigueZague zz = new ZigueZague("fantasmaVermelho.png");
         zz.setPosicao(5, 5);
         this.addPersonagem(zz);
 
-        BichinhoVaiVemHorizontal bBichinhoH = new BichinhoVaiVemHorizontal("roboPink.png");
+        BichinhoVaiVemHorizontal bBichinhoH = new BichinhoVaiVemHorizontal("fantasmaRosa.png");
         bBichinhoH.setPosicao(3, 3);
         this.addPersonagem(bBichinhoH);
 
-        BichinhoVaiVemHorizontal bBichinhoH2 = new BichinhoVaiVemHorizontal("roboPink.png");
+        BichinhoVaiVemHorizontal bBichinhoH2 = new BichinhoVaiVemHorizontal("fantasmaAzul.png");
         bBichinhoH2.setPosicao(6, 6);
         this.addPersonagem(bBichinhoH2);
 
-        Caveira bV = new Caveira("caveira.png");
+        Caveira bV = new Caveira("fantasmaLaranja.png");
         bV.setPosicao(9, 1);
         this.addPersonagem(bV);
     }
@@ -95,7 +95,7 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
         for (int i = 0; i < Consts.RES; i++) {
             for (int j = 0; j < Consts.RES; j++) {
                 try {
-                    Image newImage = Toolkit.getDefaultToolkit().getImage(new java.io.File(".").getCanonicalPath() + Consts.PATH + "bricks.png");
+                    Image newImage = Toolkit.getDefaultToolkit().getImage(new java.io.File(".").getCanonicalPath() + Consts.PATH + "blackBrick.png");
                     g2.drawImage(newImage,
                             j * Consts.CELL_SIDE, i * Consts.CELL_SIDE, Consts.CELL_SIDE, Consts.CELL_SIDE, null);
 
