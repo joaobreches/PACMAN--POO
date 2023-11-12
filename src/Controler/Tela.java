@@ -53,23 +53,23 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
 
         /*Cria faseAtual adiciona personagens*/
         hero = new Hero("pacman.png");
-        hero.setPosicao(0, 7);
+        hero.setPosicao(25, 17);
         this.addPersonagem(hero);
         
         ZigueZague zz = new ZigueZague("fantasmaVermelho.png");
-        zz.setPosicao(5, 5);
+        zz.setPosicao(17, 17);
         this.addPersonagem(zz);
 
         BichinhoVaiVemHorizontal bBichinhoH = new BichinhoVaiVemHorizontal("fantasmaRosa.png");
-        bBichinhoH.setPosicao(3, 3);
+        bBichinhoH.setPosicao(17, 16);
         this.addPersonagem(bBichinhoH);
 
         BichinhoVaiVemHorizontal bBichinhoH2 = new BichinhoVaiVemHorizontal("fantasmaAzul.png");
-        bBichinhoH2.setPosicao(6, 6);
+        bBichinhoH2.setPosicao(17, 18);
         this.addPersonagem(bBichinhoH2);
 
         Caveira bV = new Caveira("fantasmaLaranja.png");
-        bV.setPosicao(9, 1);
+        bV.setPosicao(17, 19);
         this.addPersonagem(bV);
     }
 
