@@ -60,15 +60,15 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
         zz.setPosicao(5, 5);
         this.addPersonagem(zz);
 
-        BichinhoVaiVemHorizontal bBichinhoH = new BichinhoVaiVemHorizontal("roboPink.png");
+        BichinhoVaiVemHorizontal bBichinhoH = new BichinhoVaiVemHorizontal("fantasmaRosa.png");
         bBichinhoH.setPosicao(3, 3);
         this.addPersonagem(bBichinhoH);
 
-        BichinhoVaiVemHorizontal bBichinhoH2 = new BichinhoVaiVemHorizontal("roboPink.png");
+        BichinhoVaiVemHorizontal bBichinhoH2 = new BichinhoVaiVemHorizontal("fantasmaRosa.png");
         bBichinhoH2.setPosicao(6, 6);
         this.addPersonagem(bBichinhoH2);
 
-        Caveira bV = new Caveira("caveira.png");
+        Caveira bV = new Caveira("fantasmaAzul.png");
         bV.setPosicao(9, 1);
         this.addPersonagem(bV);
         
@@ -76,15 +76,15 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
         vermelho.setPosicao(4, 18);
         this.addPersonagem(vermelho);
         
-        Ghost laranjo = new Ghost ("FantasmaVermelho.png");
+        Ghost laranjo = new Ghost ("FantasmaAzul.png");
         laranjo.setPosicao(1, 20);
         this.addPersonagem(laranjo);
         
-        Ghost roso = new Ghost ("FantasmaVermelho.png");
+        Ghost roso = new Ghost ("FantasmaRosa.png");
         roso.setPosicao(12, 19);
         this.addPersonagem(roso);
         
-        Ghost marrom = new Ghost ("FantasmaVermelho.png");
+        Ghost marrom = new Ghost ("FantasmaLaranja.png");
         marrom.setPosicao(14, 20);
         this.addPersonagem(marrom);
         
@@ -112,7 +112,7 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
         for (int i = 0; i < Consts.RES; i++) {
             for (int j = 0; j < Consts.RES; j++) {
                 try {
-                    Image newImage = Toolkit.getDefaultToolkit().getImage(new java.io.File(".").getCanonicalPath() + Consts.PATH + "bricks.png");
+                    Image newImage = Toolkit.getDefaultToolkit().getImage(new java.io.File(".").getCanonicalPath() + Consts.PATH + "blackBrick.png");
                     g2.drawImage(newImage,
                             j * Consts.CELL_SIDE, i * Consts.CELL_SIDE, Consts.CELL_SIDE, Consts.CELL_SIDE, null);
 

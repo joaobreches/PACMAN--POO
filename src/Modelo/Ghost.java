@@ -17,7 +17,7 @@ import Controler.Tela;
 
 public class Ghost extends Personagem implements Serializable{
     
-    public static Hero hero1 = new Hero ("Skoot.png");
+    public static Hero hero1 = new Hero ("pacman.png");
     
     Random random = new Random();
     private int walk = random.nextInt(4) + 1;
