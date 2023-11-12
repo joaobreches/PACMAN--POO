@@ -4,6 +4,7 @@ import Auxiliar.Consts;
 import Auxiliar.Desenho;
 import Controler.ControleDeJogo;
 import Controler.Tela;
+import auxiliar.Posicao;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.io.IOException;
@@ -11,8 +12,10 @@ import java.io.Serializable;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import auxiliar.Posicao;
 
 public class Hero extends Personagem implements Serializable{
+    
     public Hero(String sNomeImagePNG) {
         super(sNomeImagePNG);
     }

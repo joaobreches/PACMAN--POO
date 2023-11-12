@@ -4,6 +4,7 @@ import Modelo.Personagem;
 import Modelo.Caveira;
 import Modelo.Hero;
 import Modelo.BichinhoVaiVemHorizontal;
+import Modelo.Ghost;
 import Auxiliar.Consts;
 import Auxiliar.Desenho;
 import Modelo.ZigueZague;
@@ -31,7 +32,6 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 import javax.swing.JButton;
 
-
 public class Tela extends javax.swing.JFrame implements MouseListener, KeyListener {
 
     private Hero hero;
@@ -52,25 +52,42 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
         faseAtual = new ArrayList<Personagem>();
 
         /*Cria faseAtual adiciona personagens*/
-        hero = new Hero("pacman.png");
-        hero.setPosicao(25, 17);
+        hero = Ghost.hero1;
+        hero.setPosicao(0, 10);
         this.addPersonagem(hero);
         
-        ZigueZague zz = new ZigueZague("fantasmaVermelho.png");
-        zz.setPosicao(17, 17);
+        ZigueZague zz = new ZigueZague("robo.png");
+        zz.setPosicao(5, 5);
         this.addPersonagem(zz);
 
-        BichinhoVaiVemHorizontal bBichinhoH = new BichinhoVaiVemHorizontal("fantasmaRosa.png");
-        bBichinhoH.setPosicao(17, 16);
+        BichinhoVaiVemHorizontal bBichinhoH = new BichinhoVaiVemHorizontal("roboPink.png");
+        bBichinhoH.setPosicao(3, 3);
         this.addPersonagem(bBichinhoH);
 
-        BichinhoVaiVemHorizontal bBichinhoH2 = new BichinhoVaiVemHorizontal("fantasmaAzul.png");
-        bBichinhoH2.setPosicao(17, 18);
+        BichinhoVaiVemHorizontal bBichinhoH2 = new BichinhoVaiVemHorizontal("roboPink.png");
+        bBichinhoH2.setPosicao(6, 6);
         this.addPersonagem(bBichinhoH2);
 
-        Caveira bV = new Caveira("fantasmaLaranja.png");
-        bV.setPosicao(17, 19);
+        Caveira bV = new Caveira("caveira.png");
+        bV.setPosicao(9, 1);
         this.addPersonagem(bV);
+        
+        Ghost vermelho = new Ghost ("FantasmaVermelho.png");
+        vermelho.setPosicao(4, 18);
+        this.addPersonagem(vermelho);
+        
+        Ghost laranjo = new Ghost ("FantasmaVermelho.png");
+        laranjo.setPosicao(1, 20);
+        this.addPersonagem(laranjo);
+        
+        Ghost roso = new Ghost ("FantasmaVermelho.png");
+        roso.setPosicao(12, 19);
+        this.addPersonagem(roso);
+        
+        Ghost marrom = new Ghost ("FantasmaVermelho.png");
+        marrom.setPosicao(14, 20);
+        this.addPersonagem(marrom);
+        
     }
 
     public boolean ehPosicaoValida(Posicao p){
@@ -95,7 +112,7 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
         for (int i = 0; i < Consts.RES; i++) {
             for (int j = 0; j < Consts.RES; j++) {
                 try {
-                    Image newImage = Toolkit.getDefaultToolkit().getImage(new java.io.File(".").getCanonicalPath() + Consts.PATH + "blackBrick.png");
+                    Image newImage = Toolkit.getDefaultToolkit().getImage(new java.io.File(".").getCanonicalPath() + Consts.PATH + "bricks.png");
                     g2.drawImage(newImage,
                             j * Consts.CELL_SIDE, i * Consts.CELL_SIDE, Consts.CELL_SIDE, Consts.CELL_SIDE, null);
 

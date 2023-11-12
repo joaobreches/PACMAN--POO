@@ -26,6 +26,8 @@ public abstract class Personagem implements Serializable {
         this.pPosicao = new Posicao(1, 1);
         this.bTransponivel = true;
         this.bMortal = false;
+        
+        
         try {
             iImage = new ImageIcon(new java.io.File(".").getCanonicalPath() + Consts.PATH + sNomeImagePNG);
             Image img = iImage.getImage();
@@ -39,9 +41,15 @@ public abstract class Personagem implements Serializable {
     }
 
     public Posicao getPosicao() {
-        /*TODO: Retirar este método para que objetos externos nao possam operar
-         diretamente sobre a posição do Personagem*/
         return pPosicao;
+    }
+    
+    public int getPosicaoLinha() {
+        return pPosicao.getLinha();
+    }
+    
+    public int getPosicaoColuna() {
+        return pPosicao.getColuna();
     }
 
     public boolean isbTransponivel() {
@@ -53,8 +61,11 @@ public abstract class Personagem implements Serializable {
     }
 
     public void autoDesenho(){
-        Desenho.desenhar(this.iImage, this.pPosicao.getColuna(), this.pPosicao.getLinha());        
+        Desenho.desenhar(this.iImage, this.pPosicao.getColuna(), this.pPosicao.getLinha()); 
+       
     }
+    
+    
 
     public boolean setPosicao(int linha, int coluna) {
         return pPosicao.setPosicao(linha, coluna);
@@ -75,4 +86,5 @@ public abstract class Personagem implements Serializable {
     public boolean moveLeft() {
         return this.pPosicao.moveLeft();
     }
+    
 }

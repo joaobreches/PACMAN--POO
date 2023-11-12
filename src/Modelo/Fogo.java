@@ -9,7 +9,7 @@ public class Fogo extends Personagem implements Serializable{
             
     public Fogo(String sNomeImagePNG) {
         super(sNomeImagePNG);
-        this.bMortal = true;
+        this.bMortal = false;
     }
 
     @Override

@@ -1,6 +1,7 @@
 package auxiliar;
 
 import java.io.Serializable;
+import java.lang.Math;
 
 public class Posicao  implements Serializable{
     private int	linha;
@@ -8,10 +9,22 @@ public class Posicao  implements Serializable{
     
     private int linhaAnterior;
     private int colunaAnterior;
-
+    
+//    private Posicao PosicaoAnterior = new Posicao(linhaAnterior, colunaAnterior);
+//    
+//    private Posicao Cima = new Posicao (linha - 1, coluna);
+//    private Posicao Baixo = new Posicao (linha + 1, coluna);
+//    private Posicao Esquerda = new Posicao (linha, coluna - 1);
+//    private Posicao Direita = new Posicao (linha, coluna + 1);
+    
+  
+    
+    
     public Posicao(int linha, int coluna){
         this.setPosicao(linha,coluna);
     }
+    
+       
 
     public boolean setPosicao(int linha, int coluna){       
         if(linha < 0 || linha >= Auxiliar.Consts.RES)
@@ -61,3 +74,5 @@ public class Posicao  implements Serializable{
         return this.setPosicao(this.getLinha(), this.getColuna()-1);        
     }
 }
+
+   
