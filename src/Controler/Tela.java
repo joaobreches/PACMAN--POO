@@ -1,5 +1,7 @@
 package Controler;
 
+import Modelo.GhostSober;
+import Modelo.GhostDrunk;
 import Modelo.Wall;
 import Modelo.Personagem;
 import Modelo.Dot;
@@ -56,7 +58,7 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
         this.addPersonagem(hero);
         
         
-for (int i = 5; i < Consts.RES - 10; i++){
+for (int i = 5; i < Consts.RES - 14; i++){
             for (int j = 0; j < Consts.RES; j++){
                 
                 Dot dot = new Dot ("Dot.png");
@@ -64,6 +66,14 @@ for (int i = 5; i < Consts.RES - 10; i++){
                 this.addPersonagem(dot);
                
             }
+        }
+
+for (int j = 3; j < Consts.RES - 10; j++){
+                
+            Wall brick = new Wall ("curveWall.png");
+            brick.setPosicao(j, 10);
+            this.addPersonagem(brick);
+               
         }
 
 
@@ -75,6 +85,14 @@ for (int i = 5; i < Consts.RES - 10; i++){
                
         }
             
+            for (int j = 9; j < Consts.RES - 10; j++){
+                
+            Wall brick = new Wall ("curveWall.png");
+            brick.setPosicao(j, 10);
+            this.addPersonagem(brick);
+               
+        }
+ 
             for (int j = 15; j < Consts.RES; j++){
                 
             Wall brick = new Wall ("verticalWall.png");
@@ -85,19 +103,19 @@ for (int i = 5; i < Consts.RES - 10; i++){
 
         
         
-        Ghost vermelho = new Ghost ("FantasmaVermelho.png");
+        GhostSober vermelho = new GhostSober ("FantasmaVermelho.png");
         vermelho.setPosicao(13, 12);
         this.addPersonagem(vermelho);
         
-        Ghost laranjo = new Ghost ("FantasmaAzul.png");
+        GhostDrunk laranjo = new GhostDrunk ("FantasmaAzul.png");
         laranjo.setPosicao(13, 13);
         this.addPersonagem(laranjo);
         
-        Ghost roso = new Ghost ("FantasmaRosa.png");
+        GhostSober roso = new GhostSober ("FantasmaRosa.png");
         roso.setPosicao(13, 14);
         this.addPersonagem(roso);
         
-        Ghost marrom = new Ghost ("FantasmaLaranja.png");
+        GhostDrunk marrom = new GhostDrunk ("FantasmaLaranja.png");
         marrom.setPosicao(0, 20);
         this.addPersonagem(marrom);
         
