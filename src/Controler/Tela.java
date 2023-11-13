@@ -1,14 +1,12 @@
 package Controler;
 
+import Modelo.Wall;
 import Modelo.Personagem;
 import Modelo.Dot;
-import Modelo.Caveira;
 import Modelo.Hero;
-import Modelo.BichinhoVaiVemHorizontal;
 import Modelo.Ghost;
 import Auxiliar.Consts;
 import Auxiliar.Desenho;
-import Modelo.ZigueZague;
 import auxiliar.Posicao;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
@@ -57,21 +55,35 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
         hero.setPosicao(20, 13);
         this.addPersonagem(hero);
         
-        ZigueZague zz = new ZigueZague("robo.png");
-        zz.setPosicao(5, 5);
-        this.addPersonagem(zz);
+        
+for (int i = 5; i < Consts.RES - 10; i++){
+            for (int j = 0; j < Consts.RES; j++){
+                
+                Dot dot = new Dot ("Dot.png");
+                dot.setPosicao(i,j);
+                this.addPersonagem(dot);
+               
+            }
+        }
 
-        BichinhoVaiVemHorizontal bBichinhoH = new BichinhoVaiVemHorizontal("fantasmaRosa.png");
-        bBichinhoH.setPosicao(3, 3);
-        this.addPersonagem(bBichinhoH);
 
-        BichinhoVaiVemHorizontal bBichinhoH2 = new BichinhoVaiVemHorizontal("fantasmaRosa.png");
-        bBichinhoH2.setPosicao(6, 6);
-        this.addPersonagem(bBichinhoH2);
+            for (int j = 4; j < Consts.RES - 11; j++){
+                
+            Wall brick = new Wall ("verticalWall.png");
+            brick.setPosicao(j, 10);
+            this.addPersonagem(brick);
+               
+        }
+            
+            for (int j = 15; j < Consts.RES; j++){
+                
+            Wall brick = new Wall ("verticalWall.png");
+            brick.setPosicao(j, 10);
+            this.addPersonagem(brick);
+               
+        }
 
-        Caveira bV = new Caveira("fantasmaAzul.png");
-        bV.setPosicao(13, 13);
-        this.addPersonagem(bV);
+        
         
         Ghost vermelho = new Ghost ("FantasmaVermelho.png");
         vermelho.setPosicao(13, 12);
@@ -86,8 +98,14 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
         this.addPersonagem(roso);
         
         Ghost marrom = new Ghost ("FantasmaLaranja.png");
-        marrom.setPosicao(13, 15);
+        marrom.setPosicao(0, 20);
         this.addPersonagem(marrom);
+        
+        
+        
+        
+        
+        
         
     }
 
@@ -122,14 +140,16 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
             }
         }
         
-        // Desenha os pontos na tela
-        //for (int i = 0; i < Consts.RES; i++) {
-          //  for (int j = 0; j < Consts.RES; j++) {
-            //    Dot dot = new Dot("dot.png");
-              //  dot.setPosicao(i, j);
-                //this.addPersonagem(dot);               
-           // }
-        //}
+//         // Desenha os pontos na tela
+//        for (int i = 0; i < Consts.RES; i++) {
+//            for (int j = 0; j < Consts.RES; j++) {
+//                Dot dot = new Dot("dot.png");
+//                dot.setPosicao(i, j);
+//                this.addPersonagem(dot);               
+//            }
+//        }
+
+
         if (!this.faseAtual.isEmpty()) {
             this.cj.desenhaTudo(faseAtual);
             this.cj.processaTudo(faseAtual);
