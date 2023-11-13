@@ -22,7 +22,6 @@ public class Ghost extends Personagem implements Serializable{
     Random random = new Random();
     private int walk = random.nextInt(4) + 1;
     
-    
     public Ghost(String sNomeImagePNG) {
         
         super(sNomeImagePNG);
@@ -148,26 +147,6 @@ public class Ghost extends Personagem implements Serializable{
     
     public void autoDesenho(){
         
-        moverParaHero(hero1);
-        
-        walk = random.nextInt(4) + 1;
-
-           //random walk
-           switch(walk){
-               case 1: moveUp();
-               break;
-
-               case 2: moveLeft();
-               break;
-
-               case 3: moveRight();
-               break;
-
-               case 4: moveDown();
-               break;
-           }
-
-
-          super.autoDesenho();
-        }
+         super.autoDesenho();
+    }
     }
