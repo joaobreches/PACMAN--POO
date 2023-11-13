@@ -184,26 +184,68 @@ for (int i = 0; i < Consts.RES; i++){
                
         }
          
+         for (int j = 9; j < 10; j++){
+                
+            Wall brick = new Wall ("horizontalWall.png");
+            brick.setPosicao(11, j);
+            this.addPersonagem(brick);
+               
+        }
+         
+         for (int j = 15; j < 16; j++){
+                
+            Wall brick = new Wall ("horizontalWall.png");
+            brick.setPosicao(11, j);
+            this.addPersonagem(brick);
+               
+        }
+         
          
          
          
          
          //Paredes Verticais
          
-        for (int i = 2; i < 4; i++){
+        for (int i = 2; i < 5; i++){
                 
             Wall brick = new Wall ("verticalWall.png");
             brick.setPosicao(i, 1);
             this.addPersonagem(brick);
                
         } 
-        for (int i = 4; i < 5; i++){
+        for (int i = 5; i < 6; i++){
                 
            Wall brick = new Wall ("curveWallRightUnder.png");
             brick.setPosicao(i, 1);
             this.addPersonagem(brick);
                
         }
+        
+        for (int i = 1; i < 2; i++){
+                
+           Wall brick = new Wall ("curveWallRight.png");
+            brick.setPosicao(i, 1);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 1; i < 2; i++){
+                
+           Wall brick = new Wall ("curveWallLeft.png");
+            brick.setPosicao(i, 5);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 5; i < 6; i++){
+                
+           Wall brick = new Wall ("curveWallLeftUnder.png");
+            brick.setPosicao(i, 5);
+            this.addPersonagem(brick);
+               
+        }
+        
+       
         
         for (int i = 20; i < 23; i++){
                 
@@ -270,11 +312,214 @@ for (int i = 0; i < Consts.RES; i++){
                
         }
         
+        for (int i = 0; i < 7; i++){
+                
+            Wall brick = new Wall ("verticalWall.png");
+            brick.setPosicao(i, 12);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 19; i < 21; i++){
+                
+            Wall brick = new Wall ("verticalWall.png");
+            brick.setPosicao(i, 15);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 4; i < 6; i++){
+                
+            Wall brick = new Wall ("verticalWall.png");
+            brick.setPosicao(i, 16);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 12; i < 14; i++){
+                
+            Wall brick = new Wall ("verticalWall.png");
+            brick.setPosicao(i, 16);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 2; i < 5; i++){
+                
+            Wall brick = new Wall ("verticalWall.png");
+            brick.setPosicao(i, 19);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 17; i < 22; i++){
+                
+            Wall brick = new Wall ("verticalWall.png");
+            brick.setPosicao(i, 20);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 7; i < 12; i++){
+                
+            Wall brick = new Wall ("verticalWall.png");
+            brick.setPosicao(i, 22);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 2; i < 5; i++){
+                
+            Wall brick = new Wall ("verticalWall.png");
+            brick.setPosicao(i, 23);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 20; i < 23; i++){
+                
+            Wall brick = new Wall ("verticalWall.png");
+            brick.setPosicao(i, 23);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 11; i < 18; i++){
+                
+            Wall brick = new Wall ("verticalWall.png");
+            brick.setPosicao(i, 24);
+            this.addPersonagem(brick);
+               
+        }
+        
+        
+        //Paredes curvas 
+        
+        for (int i = 0; i < 1; i++){
+                
+           Wall brick = new Wall ("curveWallRight.png");
+            brick.setPosicao(1, 19);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 0; i < 1; i++){
+                
+           Wall brick = new Wall ("curveWallRight.png");
+            brick.setPosicao(11, 8);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 0; i < 1; i++){
+                
+           Wall brick = new Wall ("curveWallRight.png");
+            brick.setPosicao(18, 9);
+            this.addPersonagem(brick);
+               
+        }
+        
+        
+        for (int i = 0; i < 1; i++){
+                
+           Wall brick = new Wall ("curveWallLeft.png");
+            brick.setPosicao(18, 15);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 0; i < 1; i++){
+                
+           Wall brick = new Wall ("curveWallLeft.png");
+            brick.setPosicao(11, 16);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 0; i < 1; i++){
+                
+           Wall brick = new Wall ("curveWallLeft.png");
+            brick.setPosicao(1, 23);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 0; i < 1; i++){
+                
+           Wall brick = new Wall ("curveWallLeftUnder.png");
+            brick.setPosicao(6, 16);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 0; i < 1; i++){
+                
+           Wall brick = new Wall ("curveWallLeftUnder.png");
+            brick.setPosicao(14, 16);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 0; i < 1; i++){
+                
+           Wall brick = new Wall ("curveWallLeftUnder.png");
+            brick.setPosicao(5, 23);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 0; i < 1; i++){
+                
+           Wall brick = new Wall ("curveWallLeftUnder.png");
+            brick.setPosicao(23, 23);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 0; i < 1; i++){
+                
+           Wall brick = new Wall ("curveWallRightUnder.png");
+            brick.setPosicao(23, 1);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 0; i < 1; i++){
+                
+           Wall brick = new Wall ("curveWallRightUnder.png");
+            brick.setPosicao(6, 8);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 0; i < 1; i++){
+                
+           Wall brick = new Wall ("curveWallRightUnder.png");
+            brick.setPosicao(14, 8);
+            this.addPersonagem(brick);
+               
+        }
+        
+        for (int i = 0; i < 1; i++){
+                
+           Wall brick = new Wall ("curveWallRightUnder.png");
+            brick.setPosicao(5, 19);
+            this.addPersonagem(brick);
+               
+        }
         
         
         
         
-        Ghost vermelho = new Ghost ("FantasmaVermelho.png");
+        
+        
+        
+        
+        
+        
+        
+        
+        GhostSober vermelho = new GhostSober ("FantasmaVermelho.png");
         vermelho.setPosicao(13, 12);
         this.addPersonagem(vermelho);
         
