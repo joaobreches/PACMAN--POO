@@ -6,12 +6,13 @@
         <group>
             <file>file:/C:/Users/João%20Marcelo/OneDrive/Documentos/GitHub/PACMAN--POO/src/Modelo/Dot.java</file>
             <file>file:/C:/Users/João%20Marcelo/OneDrive/Documentos/GitHub/PACMAN--POO/imgs/verticalWall.png</file>
-            <file>file:/C:/Users/João%20Marcelo/OneDrive/Documentos/GitHub/PACMAN--POO/imgs/curveWall.png</file>
+            <file>file:/C:/Users/João%20Marcelo/OneDrive/Documentos/GitHub/PACMAN--POO/src/Modelo/GhostDrunk.java</file>
             <file>file:/C:/Users/João%20Marcelo/OneDrive/Documentos/GitHub/PACMAN--POO/src/Controler/Tela.java</file>
             <file>file:/C:/Users/João%20Marcelo/OneDrive/Documentos/GitHub/PACMAN--POO/src/Modelo/Ghost.java</file>
             <file>file:/C:/Users/João%20Marcelo/OneDrive/Documentos/GitHub/PACMAN--POO/src/Controler/ControleDeJogo.java</file>
             <file>file:/C:/Users/João%20Marcelo/OneDrive/Documentos/GitHub/PACMAN--POO/src/Auxiliar/Consts.java</file>
             <file>file:/C:/Users/João%20Marcelo/OneDrive/Documentos/GitHub/PACMAN--POO/src/Modelo/Wall.java</file>
+            <file>file:/C:/Users/João%20Marcelo/OneDrive/Documentos/GitHub/PACMAN--POO/src/Modelo/GhostSober.java</file>
         </group>
     </open-files>
 </project-private>

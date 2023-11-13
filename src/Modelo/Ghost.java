@@ -147,6 +147,6 @@ public class Ghost extends Personagem implements Serializable{
     
     public void autoDesenho(){
         
-         super.autoDesenho();
+     super.autoDesenho();
     }
-    }
+}
