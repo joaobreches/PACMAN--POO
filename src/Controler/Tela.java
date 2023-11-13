@@ -1,6 +1,7 @@
 package Controler;
 
 import Modelo.Personagem;
+import Modelo.Dot;
 import Modelo.Caveira;
 import Modelo.Hero;
 import Modelo.BichinhoVaiVemHorizontal;
@@ -53,7 +54,7 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
 
         /*Cria faseAtual adiciona personagens*/
         hero = Ghost.hero1;
-        hero.setPosicao(0, 10);
+        hero.setPosicao(20, 13);
         this.addPersonagem(hero);
         
         ZigueZague zz = new ZigueZague("robo.png");
@@ -69,23 +70,23 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
         this.addPersonagem(bBichinhoH2);
 
         Caveira bV = new Caveira("fantasmaAzul.png");
-        bV.setPosicao(9, 1);
+        bV.setPosicao(13, 13);
         this.addPersonagem(bV);
         
         Ghost vermelho = new Ghost ("FantasmaVermelho.png");
-        vermelho.setPosicao(4, 18);
+        vermelho.setPosicao(13, 12);
         this.addPersonagem(vermelho);
         
         Ghost laranjo = new Ghost ("FantasmaAzul.png");
-        laranjo.setPosicao(1, 20);
+        laranjo.setPosicao(13, 13);
         this.addPersonagem(laranjo);
         
         Ghost roso = new Ghost ("FantasmaRosa.png");
-        roso.setPosicao(12, 19);
+        roso.setPosicao(13, 14);
         this.addPersonagem(roso);
         
         Ghost marrom = new Ghost ("FantasmaLaranja.png");
-        marrom.setPosicao(14, 20);
+        marrom.setPosicao(13, 15);
         this.addPersonagem(marrom);
         
     }
@@ -115,12 +116,20 @@ public class Tela extends javax.swing.JFrame implements MouseListener, KeyListen
                     Image newImage = Toolkit.getDefaultToolkit().getImage(new java.io.File(".").getCanonicalPath() + Consts.PATH + "blackBrick.png");
                     g2.drawImage(newImage,
                             j * Consts.CELL_SIDE, i * Consts.CELL_SIDE, Consts.CELL_SIDE, Consts.CELL_SIDE, null);
-
                 } catch (IOException ex) {
                     Logger.getLogger(Tela.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         }
+        
+        // Desenha os pontos na tela
+        //for (int i = 0; i < Consts.RES; i++) {
+          //  for (int j = 0; j < Consts.RES; j++) {
+            //    Dot dot = new Dot("dot.png");
+              //  dot.setPosicao(i, j);
+                //this.addPersonagem(dot);               
+           // }
+        //}
         if (!this.faseAtual.isEmpty()) {
             this.cj.desenhaTudo(faseAtual);
             this.cj.processaTudo(faseAtual);
